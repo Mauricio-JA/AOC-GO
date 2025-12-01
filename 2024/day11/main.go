@@ -5,6 +5,7 @@ import (
 	"maps"
 	"math"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -63,7 +64,8 @@ func sumStonesCount(stonesMap map[int]int) int {
 }
 
 func main() {
-	input, _ := os.ReadFile("day11/input.txt")
+	inputPath := filepath.Join("2024", "day11", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	initialStones := strings.Split(string(input), " ")
 	stonesMap := make(map[int]int)
 	for _, stone := range initialStones {

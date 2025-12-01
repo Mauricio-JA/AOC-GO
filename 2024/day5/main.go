@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strconv"
 	"strings"
@@ -48,9 +49,9 @@ func rigthSortedPages(rules [][2]int, pages []int) (result []int) {
 }
 
 func main() {
-	input, _ := os.ReadFile("day5/input.txt")
-	var rows = strings.Split(string(input), "\n")
-
+	inputPath := filepath.Join("2024", "day5", "input.txt")
+	input, _ := os.ReadFile(inputPath)
+	var rows = strings.Split(string(input), "\r\n")
 	//Separate rules and updates
 	rules, updates := [][2]int{}, [][]int{}
 	isRule := true

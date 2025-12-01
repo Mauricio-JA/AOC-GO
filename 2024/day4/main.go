@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strings"
 )
@@ -110,7 +111,8 @@ func checkX_MAS(wordSearch [][]string, x int, y int, maxW int, maxH int) int {
 }
 
 func main() {
-	input, _ := os.ReadFile("day4/input.txt")
+	inputPath := filepath.Join("2024", "day4", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	var rows = strings.Split(string(input), "\n")
 
 	wordSearch := make([][]string, len(rows))

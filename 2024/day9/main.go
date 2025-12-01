@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strconv"
 	"strings"
@@ -116,7 +117,8 @@ func compressPart2(diskMap []string, maxFileId int) []string {
 }
 
 func main() {
-	input, _ := os.ReadFile("day9/input.txt")
+	inputPath := filepath.Join("2024", "day9", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	diskInput := strings.Split(string(input), "")
 	diskMap, maxFileId := formatDiskMap(diskInput)
 

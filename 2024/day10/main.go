@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strconv"
 	"strings"
@@ -56,7 +57,8 @@ func removeRepeated(peaks []height) (result []height) {
 }
 
 func main() {
-	input, _ := os.ReadFile("day10/input.txt")
+	inputPath := filepath.Join("2024", "day10", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	rows := strings.Split(string(input), "\n")
 
 	topoMap := make([][]int, len(rows))

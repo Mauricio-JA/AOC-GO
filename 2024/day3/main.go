@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"sort"
 	"strconv"
 	"strings"
@@ -86,7 +87,8 @@ func checkEnabledInstructions(indexToCheck int, instructions map[int]bool, keys 
 }
 
 func main() {
-	input, _ := os.ReadFile("day3/input.txt")
+	inputPath := filepath.Join("2024", "day3", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	text := strings.Split(string(input), "")
 	// fmt.Println(text)
 	var posibleIndexes []int

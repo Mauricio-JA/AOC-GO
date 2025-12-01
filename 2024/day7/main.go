@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strconv"
 	"strings"
@@ -40,7 +41,8 @@ func combineOperations(numbers []int, acc int) (results []int) {
 }
 
 func main() {
-	input, _ := os.ReadFile("day7/input.txt")
+	inputPath := filepath.Join("2024", "day7", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	rows := strings.Split(string(input), "\n")
 
 	sum := 0

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strings"
 	"time"
@@ -84,7 +85,8 @@ func followPath(guard Guard, mappedArea [][]string, maxW int, maxH int, obstacle
 }
 
 func main() {
-	input, _ := os.ReadFile("day6/input.txt")
+	inputPath := filepath.Join("2024", "day6", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	var rows = strings.Split(string(input), "\n")
 
 	//Separate rules and updates

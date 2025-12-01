@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -52,7 +53,8 @@ func checkSafe(levels []string) bool {
 }
 
 func main() {
-	input, _ := os.ReadFile("day2/input.txt")
+	inputPath := filepath.Join("2024", "day2", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	var reports = strings.Split(string(input), "\n")
 	var countPart1 int
 	var countPart2 int

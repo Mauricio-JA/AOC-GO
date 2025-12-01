@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"slices"
 	"strings"
 )
@@ -79,7 +80,8 @@ func searchAntinodes(antena node, cityMap [][]string, maxW int, maxH int) (antin
 }
 
 func main() {
-	input, _ := os.ReadFile("day8/input.txt")
+	inputPath := filepath.Join("2024", "day8", "input.txt")
+	input, _ := os.ReadFile(inputPath)
 	var rows = strings.Split(string(input), "\n")
 
 	maxW, maxH := len(rows), len(rows[0])

@@ -60,7 +60,6 @@ func main() {
 		results := combineOperations(numbers, 0)
 
 		if slices.Contains(results, testValue) {
-			fmt.Println(testValue)
 			sum += testValue
 		}
 

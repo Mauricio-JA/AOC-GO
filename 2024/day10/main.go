@@ -59,7 +59,7 @@ func removeRepeated(peaks []height) (result []height) {
 func main() {
 	inputPath := filepath.Join("2024", "day10", "input.txt")
 	input, _ := os.ReadFile(inputPath)
-	rows := strings.Split(string(input), "\n")
+	rows := strings.Split(string(input), "\r\n")
 
 	topoMap := make([][]int, len(rows))
 	for i, row := range rows {

@@ -3,6 +3,7 @@
 ### Run:
 
 #### AOC 2024
+
 ```bash
 go run 2024/day1/main.go
 go run 2024/day2/main.go
@@ -18,3 +19,9 @@ go run 2024/day11/main.go
 ```
 
 #### AOC 2025
+
+```bash
+go run 2025/day1/main.go
+go run 2025/day2/main.go
+go run 2025/day3/main.go
+```

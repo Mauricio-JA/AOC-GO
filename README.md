@@ -26,4 +26,5 @@ go run 2025/day2/main.go
 go run 2025/day3/main.go
 go run 2025/day4/main.go
 go run 2025/day5/main.go
+go run 2025/day6/main.go
 ```
